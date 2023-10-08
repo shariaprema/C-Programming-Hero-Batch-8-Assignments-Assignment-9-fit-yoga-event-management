@@ -24,6 +24,7 @@ const ServicesCards = ({service}) => {
                 </p>
             </div>
             <div className="flex items-center justify-between p-6">
+                <Link to={`/services/${id}`}> 
                 <div className="p-6 pt-0">
                 <button
                 className="select-none rounded-lg bg-[#4fbf70] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-emerald-700/20 transition-all hover:shadow-lg hover:shadow-emerald-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -33,6 +34,7 @@ const ServicesCards = ({service}) => {
                  Read more
                 </button>
                 </div>
+                </Link>
                 <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased">
                 ${price}
                 </p>
