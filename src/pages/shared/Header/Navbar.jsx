@@ -83,7 +83,7 @@ const Navbar = () => {
                 type="button"
                 data-ripple-light="true"
                 >
-                <span>Buy Now</span>
+                <span>Login</span>
                 </button>
                 <button
                 className="middle none relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
@@ -136,7 +136,7 @@ const Navbar = () => {
                     type="button"
                     data-ripple-light="true"
                 >
-                    <span>Buy Now</span>
+                    <span>Login bfhtdhdthfjffyjfy</span>
                 </button>
                 </ul>
                 </div>
