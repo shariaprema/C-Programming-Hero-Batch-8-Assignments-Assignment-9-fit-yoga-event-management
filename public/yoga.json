@@ -1,0 +1,49 @@
+[
+    {
+      "id": "1",
+      "title_name": "Mindfulness and Meditation Retreats",
+      "picture": "https://i.ibb.co/JyRCWCj/1.jpg",
+      "description": "Embark on a transformative journey of self-discovery and inner peace with our Mindfulness and Meditation Retreats. Dive into the serene realms of meditation, mindfulness, and spiritual growth amidst breathtaking natural landscapes. Join us for a rejuvenating experience that calms your mind and nourishes your soul.\n\nOur expert instructors will guide you through meditation practices that help you reduce stress, increase mindfulness, and connect with your inner self. In these retreats, you'll find a supportive community of like-minded individuals, tranquil environments, and holistic well-being. Whether you're new to meditation or seeking to deepen your practice, our retreats offer a safe and nurturing space for your spiritual journey.",
+      "price": 620
+    },
+    {
+      "id": "2",
+      "title_name": "Wellness and Spa Getaways",
+      "picture": "https://i.ibb.co/Xxr8wMH/2.jpg",
+      "description": "Experience pure bliss and rejuvenation at our Wellness and Spa Getaways. Immerse yourself in the world of wellness with luxurious spa treatments, holistic therapies, and serene environments. Let go of stress and embrace tranquility as you pamper your body, mind, and spirit.\n\nOur wellness retreats are carefully curated to provide you with an unparalleled experience of relaxation and revitalization. From soothing massages to holistic wellness practices, you'll find a comprehensive range of treatments that promote physical and mental well-being. Take a break from the hustle and bustle of daily life and embark on a journey to rejuvenate your soul.",
+      "price": 320
+    },
+    {
+      "id": "3",
+      "title_name": "Yoga Event Coordination",
+      "picture": "https://i.ibb.co/QCWkFD3/3.jpg",
+      "description": "Let us handle the intricate details of your yoga event with our Yoga Event Coordination service. Our experienced team ensures flawless logistics, exceptional instructor coordination, and a seamless event flow. Focus on providing an extraordinary yoga experience while we take care of the rest.\n\nOur event coordination services are tailored to meet your unique needs, whether you're hosting a yoga retreat, workshop, or festival. We manage venue selection, scheduling, instructor communication, and attendee logistics, allowing you to focus on your passion for yoga and wellness. Trust us to bring your vision to life and create memorable yoga events.",
+      "price": 820
+    },
+    {
+      "id": "4",
+      "title_name": "Online Yoga and Fitness Classes",
+      "picture": "https://i.ibb.co/wdsrXGR/4.jpg",
+      "description": "Stay connected with your wellness journey through our Online Yoga and Fitness Classes. Access live and on-demand sessions with expert instructors from the comfort of your home. Rediscover your inner strength, flexibility, and peace of mind with our virtual wellness platform.\n\nOur virtual classes offer the flexibility to practice yoga and fitness on your schedule. Whether you're a beginner or an experienced practitioner, you'll find a variety of classes that cater to your needs. Join a supportive online community, stay accountable to your goals, and experience the transformative power of yoga and fitness from anywhere in the world.",
+      "price": 420
+    },
+    {
+        "id": "5",
+        "title_name": "Private Yoga Event Coordination",
+        "picture": "https://i.ibb.co/bRfqZNt/5.jpg",
+        "description": "Our Private Yoga Event Coordination service is designed to transform your vision of a private yoga event into a seamless and unforgettable reality. Whether you're planning a special celebration, an exclusive retreat, or a corporate wellness gathering, we have the expertise to handle every intricate detail.\n\nOur experienced event coordinators will collaborate closely with you to understand your unique requirements and preferences. From selecting the perfect venue to curating a tailored yoga program, we ensure that every element aligns with your goals. We coordinate with skilled yoga instructors, manage scheduling, and oversee logistics, guaranteeing a stress-free experience for you and your guests.",
+        "price": 900
+      },
+
+    {
+      "id": "6",
+      "title_name": "Yoga Holistic Health Seminars",
+      "picture": "https://i.ibb.co/xfp7FRr/6.jpg",
+      "description": "Explore the realms of holistic well-being with our Holistic Health Seminars. Dive into enlightening workshops covering holistic nutrition, natural healing modalities, and integrative wellness practices. Gain the knowledge and tools to transform your life and embrace holistic living.\n\nOur seminars bring together leading experts in holistic health to provide you with in-depth insights into nutrition, alternative healing methods, and holistic lifestyle choices. Discover how to enhance your physical, mental, and spiritual well-being through conscious choices and holistic practices. Join us on a journey toward optimal health and vitality.",
+      "price": 1000
+    }
+ 
+  ]
+
+  
+  
