@@ -1,32 +1,24 @@
-import React from 'react';
-
+import { Link } from "react-router-dom";
+import errorPic from "../../assets/yoga-img/error.png"
 const Error = () => {
     return (
         <div>
-            <section className="page_404">
-  <div className="container">
-    <div className="row">
-      <div className="col-sm-12 ">
-        <div className="col-sm-10 col-sm-offset-1  text-center">
-          <div className="four_zero_four_bg">
-            <h1 className="text-center ">404</h1>
-
-          </div>
-
-          <div className="contant_box_404">
-            <h3 className="h2">
-              Look like you're lost
-            </h3>
-
-            <p>the page you are looking for not avaible!</p>
-
-            <a href="" className="link_404">Go to Home</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="hero min-h-screen" >
+                <img src={errorPic} alt="" />
+            <div className="hero-overlay bg-opacity-90"></div>
+            <div className="hero-content text-center text-neutral-content">
+                <div className="max-w-md">
+                <h1 className="mb-5 text-7xl font-bold">404</h1>
+                <h1 className="mb-5 text-4xl font-bold">Look like you're lost</h1>
+                <p className="mb-5">the page you are looking for not avaible!!</p>
+                
+                <Link href="/">
+                  <button className="inline-block px-8 py-3 text-base font-semibold text-center text-white bg-sky-950 transition border border-white rounded-lg hover:bg-white hover:text-primary">Go to Home</button>
+                </Link>
+                </div>
+            </div>
+            </div>
+            
         </div>
     );
 };

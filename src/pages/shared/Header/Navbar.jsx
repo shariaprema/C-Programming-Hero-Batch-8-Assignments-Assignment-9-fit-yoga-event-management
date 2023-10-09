@@ -1,23 +1,94 @@
-// import picture1 from '../../../assets/pic/logo.png'
-// import picture2 from '../../../assets/pic/cover2.jpg'
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import defaultProfile from "../../../assets/yoga-img/user.png"
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const Navbar = () => {
+    const {user, userLogout} = useContext(AuthContext)
+
+    const handleLogout =()=>{
+        userLogout()
+        .then(() => {
+        console.log('Sign-out successful.');
+        }).catch((error) => {
+        console.log(error.message);
+        });
+    }
+
+    const navBarLinks = <>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/career">Career</NavLink></li>
+        <li><NavLink to="/login">login</NavLink></li>
+
+    </>
 
 
     return (
        
 
-        <>
+        <div>
 
-        <nav className="sticky inset-0 z-10  block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
-                <div className="flex items-center text-gray-900">
+        <div className="navbar text-[#3da35c] sticky inset-0 z-10 h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        {navBarLinks} 
+                    </ul>
+                </div>
+                <a
+                href="#"
+                className="text-[#4fbf70] mr-4 block cursor-pointer py-1.5 font-bold text-3xl leading-rela\v]v ]]]xed text-inherit antialiased">
+                FitYoga
+                </a>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal  px-1">
+                    {navBarLinks}
+                </ul>
+            </div>
+            <div className="navbar-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                        <img src={defaultProfile} />
+                    </div>
+                </label>
+               {
+                user? <button onClick={handleLogout}
+                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                type="button"
+                data-ripple-light="true"
+                >
+                <span>Logout</span>
+                </button>
+                    :
+                   <Link to='/login'>
+                <button
+                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                type="button"
+                data-ripple-light="true"
+                >
+                <span>Login</span>
+                </button>
+                </Link>
+               }
+
+                
+             
+            </div>
+        </div>
+
+        {/* <nav className="sticky inset-0 z-10  block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+                <div className="flex items-center text-[#48bd6b]">
             <a
                 href="#"
-                className="mr-4 block cursor-pointer py-1.5 font-sans text-[#4fbf70] font-medium leading-rela\v]v ]]]xed text-inherit antialiased"
+                className="text-[#4fbf70] mr-4 block cursor-pointer py-1.5 font-bold text-3xl leading-rela\v]v ]]]xed text-inherit antialiased"
                 >
-                Material Tailwind
+                FitYoga
                 </a>
                 <ul tabIndex={0} className="lg:flex gap-6 items-center ml-auto mr-8 hidden">
                 <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
@@ -35,9 +106,7 @@ const Navbar = () => {
                 </NavLink>
                 </li>
                 <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    {/* <a className="flex items-center" href="#">
-                    Account
-                    </a> */}
+                
                  <NavLink
                 to="/about"
                 style={({ isActive, isPending }) => {
@@ -78,13 +147,25 @@ const Navbar = () => {
                 </NavLink>
                 </li>
                 </ul>
-                <button
-                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                 
+              <div className="flex">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                <img src={defaultProfile} />
+                </div>
+                </label>
+
+                <Link to='/login'><button
+                className="middle mt-2 none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                 type="button"
                 data-ripple-light="true"
                 >
                 <span>Login</span>
                 </button>
+                </Link>
+              </div>
+
+
                 <button
                 className="middle none relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
                 data-collapse-target="sticky-navar"
@@ -136,14 +217,14 @@ const Navbar = () => {
                     type="button"
                     data-ripple-light="true"
                 >
-                    <span>Login bfhtdhdthfjffyjfy</span>
+                <span>Login</span>
                 </button>
                 </ul>
                 </div>
-        </nav>
+        </nav> */}
         
        
-        </>     
+        </div>     
         
     );
 };
