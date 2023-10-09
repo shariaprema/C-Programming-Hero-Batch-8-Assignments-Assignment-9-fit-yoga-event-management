@@ -3,14 +3,19 @@ import Navbar from "../shared/Header/Navbar";
 import { FcGoogle } from 'react-icons/fc';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
+// import toast from 'react-hot-toast';
+
 
 const Login = () => {
 
-    const {logInUser} = useContext(AuthContext)
+    const {logInUser, signInWithGoogle} = useContext(AuthContext)
+
     const location = useLocation();
     const navigate = useNavigate();
 
     const handleLogin = e =>{
+        console.log(e);
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         const email =form.get('email')
@@ -18,18 +23,30 @@ const Login = () => {
         logInUser(email, password)
 
         .then((result) => {
-        console.log(result.user);
-         alert('Login successfully')
+            console.log(result.user);
+        toast.success('User logged in successfully')        
          navigate(location?.state? location.state : '/')
+         e.target.reset();
         
         })
         .catch((error) => {
-           alert(error.message)
+           toast.error(error.message)
         });
 
-        
+
+    }
 
 
+    const handleGoogleSignIn =()=>{
+        signInWithGoogle()
+        .then((result) => {
+            toast.success('User logged in successfully')        
+
+            
+          }).catch((error) => {
+           toast.error(error.message)
+            
+          });
     }
 
 
@@ -67,13 +84,18 @@ const Login = () => {
                         </div>
 
                         <p className="text-sm text-center mt-4">Don`t have an account <Link to="/register" className="text-pink-500 font-bold">Register</Link></p>
-                        <div className="flex justify-center items-center ">
-                        <FcGoogle className="w-7 h-7"/>
+                        <div  className="flex justify-center items-center ">
+                        <button className="btn" onClick={handleGoogleSignIn}><FcGoogle className=" w-6 h-6"/></button>
                         </div>
                     </form>
 
                 
                 </div>
+
+                <Toaster
+            position="top-right"
+            reverseOrder={false}
+            />
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import defaultProfile from "../../../assets/yoga-img/user.png"
+// import defaultProfile from "../../../assets/yoga-img/user.png"
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -18,8 +18,14 @@ const Navbar = () => {
 
     const navBarLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/career">Career</NavLink></li>
+        {
+            user && <>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/Blog">Blog</NavLink></li>
+            
+            </>
+        }
+        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         <li><NavLink to="/login">login</NavLink></li>
 
     </>
@@ -52,14 +58,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+               {
+                user?
+                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
+                <div>
+                <p className="text-sm">{user.email}</p>
+                <p className="text-sm">{user.displayName}</p>
+                </div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src={defaultProfile} />
+                    <img src={user.photoURL} alt={user.displayName} />
                     </div>
                 </label>
-               {
-                user? 
-                <Link to='/login'>
+               </div>
+               <div>
+               <Link to='/login'>
                 <button onClick={handleSignOut}
                 className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 text-xs font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                 type="button"
@@ -68,6 +82,11 @@ const Navbar = () => {
                 <span>SignOut</span>
                 </button>
                 </Link>
+               </div>
+              
+                </div>
+
+                
                     :
                    
                 <button

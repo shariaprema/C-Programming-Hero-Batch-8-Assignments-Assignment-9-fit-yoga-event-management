@@ -40,7 +40,7 @@ const Banner = () => {
 
 
 
-<div className="hero min-h-screen" >
+<div className="hero" >
 <img src={banner} alt="" />
 
   <div className="hero-overlay bg-opacity-60"></div>

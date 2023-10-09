@@ -3,10 +3,11 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import About from "../pages/About/About";
 import Service from "../pages/Service/Service";
 import Error from "../pages/ErrorPage/Error";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../pages/Blog/Blog";
+import AboutUs from "../pages/AboutUs/AboutUs";
 
 
 const router = createBrowserRouter([
@@ -22,11 +23,6 @@ const router = createBrowserRouter([
                 
             },
 
-            {
-                path: '/about',
-                element: <About></About>
-                
-            },
 
             {
                 path:'/services/:id',
@@ -35,6 +31,14 @@ const router = createBrowserRouter([
                 
             },
             
+            {
+                path: '/aboutUs',
+                element:<PrivateRoute><AboutUs></AboutUs></PrivateRoute>
+            },
+            {
+                path: '/blog',
+                element:<PrivateRoute><Blog></Blog></PrivateRoute>
+            },
             {
                 path: '/login',
                 element:<Login></Login>

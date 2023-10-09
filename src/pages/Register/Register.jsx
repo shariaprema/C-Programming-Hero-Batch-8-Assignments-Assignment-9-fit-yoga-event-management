@@ -1,28 +1,51 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../shared/Header/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Register = () => {
-    const {user,createUser}= useContext(AuthContext)
+    const {user,createUser, updateUserProfile}= useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleRegister = e =>{
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         
         const name =form.get('name')
-        const image =form.get('img')
+        const img =form.get('img')
         const email =form.get('email')
         const password =form.get('password')
-        console.log(name,image,email, password)
+        console.log(name,img,email, password)
 
         createUser(email,password)
-        .then((result) => {
-            console.log(result.user)
+        .then((res) => {
+            updateUserProfile(img,name)
+            .then(()=>{
+                toast.success('User create successfully!')
+                navigate('/')
+
+            })
           })
           .catch((error) => {
-            console.log(error.message)
+            toast.error(error.message)
           });
+
+
+        //   if(!/(?=.*?[A-Z]).{6,}(?=.*?[#?!@$%^&*-])/.test(password)){
+        //   toast.error("Invalid Password")
+        //   }
+
+          if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)){
+          toast.error("Invalid Password")
+          }
+
+         
+// Minimum six characters, at least one uppercase letter and one special character
+
+        //  if(password.length > 6){
+        //     toast.success(" Password")
+        //  }
         
 
     }
@@ -72,6 +95,10 @@ const Register = () => {
 
                 
                 </div>
+                <Toaster
+                position="top-right"
+                reverseOrder={false}
+                />
         </div>
     );
 };
