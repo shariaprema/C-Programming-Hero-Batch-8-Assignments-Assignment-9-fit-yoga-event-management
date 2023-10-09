@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import About from "../pages/About/About";
 import Service from "../pages/Service/Service";
 import Error from "../pages/ErrorPage/Error";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
 
             {
                 path:'/services/:id',
-                element: <Service></Service>,
+                element: <PrivateRoute><Service></Service></PrivateRoute>,
                 loader:()=>fetch(`/yoga.json`)
                 
             },
