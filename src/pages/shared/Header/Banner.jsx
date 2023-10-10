@@ -1,54 +1,20 @@
 import banner from '../../../assets/yoga-img/banner.jpg'
-// import pic2 from '../../../assets/pic/Banner.jpg'
 
 
 
 
 const Banner = () => {
 
-
-//   <div>   
-// <div className="mx-auto relative w-[360px] h-[383px] flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-// <div className="relative  overflow-hidden  rounded-t-xl  bg-white bg-clip-border text-gray-700">
-//     <img
-//     src={picture}
-//     className="h-[294px] w-[360px] object-cover bg-bottom"
-//     />
-// </div>
-
-// <div className="pl-3 mb-2">
-// <p  className="block text-xl font-semibold  ">{title_name}</p>
-// </div>
-// <div className="pl-3 mb-2">
-// {/* <p className="text-sm object-cover">{description}</p> */}
-// </div>
-
-// <div className="pl-3 mt-4 mb-1 flex">
-//     <h2  className=" rounded-md py-1 px-3 text-sm font-medium">{price}</h2>
-// </div>
-
-// <Link to={`/servics/${id}`}> <button className="btn btn-primary">See Details</button></Link>
-
-
-// </div>
-
-
-
-// </div>
     return (
     <div className=''>
-
-
-
-<div className="hero" >
-<img src={banner} alt="" />
-
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      
+      <div className="hero" >
+    <img src={banner} className='hero-overlay bg-opacity-30' alt="" />
+ 
+    <div className="hero-content text-center text-neutral-content">
+      <div className="lg:max-w-2xl md:max-w-md max-w-sm">
+        <h1 className="mb-5 lg:text-5xl text-3xl flex justify-center items-center font-bold">YOU CANNOT DO YOGA,
+        YOGA IS YOUR NATURAL STATE</h1>
+        <p className="mb-5"></p>
       <div>
       <form>   
           <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -68,6 +34,7 @@ const Banner = () => {
     </div>
   </div>
 </div>
+
 
  </div>
     );

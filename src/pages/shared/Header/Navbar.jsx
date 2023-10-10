@@ -1,5 +1,4 @@
 import { useContext } from "react";
-// import defaultProfile from "../../../assets/yoga-img/user.png"
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -20,7 +19,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         {
             user && <>
-            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/aboutUs">About Us</NavLink></li>
             <li><NavLink to="/Blog">Blog</NavLink></li>
             
             </>
@@ -62,9 +61,9 @@ const Navbar = () => {
                 user?
                 <div className="flex justify-center items-center">
                 <div className="flex justify-center items-center">
-                <div>
+                <div className="mt-3">
                 <p className="text-sm">{user.email}</p>
-                <p className="text-sm">{user.displayName}</p>
+                <p className="text-xs font-bold">{user.displayName}</p>
                 </div>
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
@@ -75,7 +74,7 @@ const Navbar = () => {
                <div>
                <Link to='/login'>
                 <button onClick={handleSignOut}
-                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 text-xs font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6  text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                 type="button"
                 data-ripple-light="true"
                 >
@@ -90,7 +89,7 @@ const Navbar = () => {
                     :
                    
                 <button
-                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4  text-xs font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6  text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                 type="button"
                 data-ripple-light="true"
                 >

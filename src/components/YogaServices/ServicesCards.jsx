@@ -7,9 +7,9 @@ const ServicesCards = ({service}) => {
     return (
         <div>
 
-            <div className="card w-[360px] h-[465px] bg-base-100 shadow-xl">
+            <div className="card lg:w-[360px] md:w-[360px] w-full h-[465px] bg-base-100 shadow-xl">
            
-            <figure> <img src={picture} alt="card-pic" className="h-[200px] w-[400px] object-cover bg-center overflow-hidden max-w-sm" />
+            <figure> <img src={picture} alt="card-pic" className="h-[200px] lg:w-[400px] md:w-[400px] w-full object-cover bg-center overflow-hidden max-w-sm" />
             </figure>
             
             <div className="card-body">
@@ -31,7 +31,7 @@ const ServicesCards = ({service}) => {
                 }
                 
             </div>
-            <div className="flex items-center justify-between pt-4 bg-red-500 ">
+            <div className="flex items-center justify-between pt-4 ">
                <div>
                <Link to={`/services/${id}`}> 
                 <div className="  pt-0">
@@ -45,9 +45,11 @@ const ServicesCards = ({service}) => {
                 </div>
                 </Link>
                </div>
+                <div>
                 <p className=" text-base font-semibold ">
                 ${price}
                 </p>
+                </div>
             </div>
             </div>
             </div>

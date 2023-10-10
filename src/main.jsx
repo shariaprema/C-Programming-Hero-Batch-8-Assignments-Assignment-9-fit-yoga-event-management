@@ -12,6 +12,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </AuthProvider>
   </React.StrictMode>,
 )
-// text-[rgb(79,191,112)]
-// text-[#4fbf70]
-// pink-500

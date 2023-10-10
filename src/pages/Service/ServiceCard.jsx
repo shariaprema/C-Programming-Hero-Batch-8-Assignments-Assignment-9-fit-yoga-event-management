@@ -10,10 +10,6 @@ const ServiceCard = ({service}) => {
                 <img src={picture}
                 className="bg-center bg-contain"/> 
 
-               {/* <b  className="absolute bottom-0 left-2/4 flex w-[calc(100%-0rem)] -translate-x-2/4 justify-between bg-[#4fbf70]/50 py-4 px-6 shadow-lg shadow-[#4fbf70]/5 saturate-200 backdrop-blur-sm">
-               <h2  className=" text-white rounded-md py-3 px-4 bg-pink-500  text-sm font-medium">Price: ${price}:00</h2>
-                </b> */}
-
                 </div>
                 <div className="p-4">
                 <div className="mb-2 flex justify-between">
