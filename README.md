@@ -1,8 +1,23 @@
-# React + Vite
+### Project features.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+      Answer:
 
-Currently, two official plugins are available:
+- FitYoga have  navbar, banner, service card ,online events, Yoga instructor details footer
+event 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create private/protected route. if the user is not logged in, the private route redirects to the login page
+
+- Created signed in by google, private route, logged in, the user name, profile picture and the logout button should appear on the header and added toast alert
+
+- Added hot toast alert for Registration/Login page, displayed errors, added two more routes
+
+- Created Login/registration section user can use it.
+
+
+
+
+
+
+
+
+
