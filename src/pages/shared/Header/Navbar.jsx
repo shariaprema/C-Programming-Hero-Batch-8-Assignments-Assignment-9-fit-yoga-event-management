@@ -88,6 +88,7 @@ const Navbar = () => {
                 
                     :
                    
+                <Link to="/login">
                 <button
                 className="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6  text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                 type="button"
@@ -95,6 +96,7 @@ const Navbar = () => {
                 >
                 <span>Login</span>
                 </button>
+                </Link>
                 
                }
 
