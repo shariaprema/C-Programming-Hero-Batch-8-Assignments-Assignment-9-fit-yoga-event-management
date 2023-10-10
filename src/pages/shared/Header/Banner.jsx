@@ -11,7 +11,7 @@ const Banner = () => {
     <img src={banner} className='hero-overlay bg-opacity-30' alt="" />
  
     <div className="hero-content text-center text-neutral-content">
-      <div className="lg:max-w-2xl md:max-w-md max-w-sm">
+      <div className="lg:max-w-2xl md:max-w-md max-w-sm"data-aos="flip-left">
         <h1 className="mb-5 lg:text-5xl text-3xl flex justify-center items-center font-bold">YOU CANNOT DO YOGA,
         YOGA IS YOUR NATURAL STATE</h1>
         <p className="mb-5"></p>
